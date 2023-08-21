@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <style>
+      form{
+        margin-left:40px;
+      }
+        h1{
+            color:white;
+            background-color: black;
+            width: 20;
+            text-align: center;
+            font-size: 70px;
+        }
+        .btn{
+            position: absolute;
+            right:34px;
+            top:870px;
+        }
+        .btn1{
+            position: absolute;
+            right:120px;
+            top:870px;
+            
+        }
+        .btn:hover{
+            cursor: pointer;
+            color:purple;
+            
+            
+        }
+        .btn1:hover{
+            cursor: pointer;
+            color:rgb(104, 104, 241);
+
+        }
+        .container input:hover{
+        cursor: pointer;
+            color:purple;
+
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1> GYM form  </h1>
+    <form action="backend.php">
+      <label for="name">Full Name :</label>
+      <div><input type="text" name="my name" id="name" /></div>
+      <br />
+      <label for="address"> Address:</label>
+      <div><input type="text" name="my address" id="address" /></div>
+      <br />
+      <label for="email">Email :</label>
+      <div><input type="email" name="my Email" id="email" /></div>
+      <br />
+      <label for="phoneno">Phone no. :</label>
+      <div>
+          <input type="number" name="my phoneno" id="phoneno" />
+        </div>
+        <br />
+        <label for="age"> Age:</label>
+        <div><input type="number" name="my age" id="age" /></div>
+        <br />
+        <label for="date">Date:</label>
+        <div><input type="date" name="my date" id="date" /></div>
+        <br />
+      <label for="checkbox ">Are you eligible ?</label>
+      <div>
+        <input type="checkbox" name="my eligibility" id="checkbox" />
+      </div>
+      <br/>
+      <div>
+        Gender : Male <input type="radio" name="my gender" /> Female
+        <input type="radio" name="my gender" /> others
+        <input type="radio" name="my gender" />  
+      </div>
+      <br />
+      <div>
+          <label for="course duration">Course duration</label>
+          <select name="my course duration" id="course duration">
+              <option value="4 Months "> 4 Months</option>
+              <option value="6 Months"> 6 Months</option>
+              <option value="1 Year"> 1 Year</option>
+              <option value="2 Year"> 2 Year</option>
+            </select>
+        </div>
+        <br />
+        <br />
+        <div>
+          Any Query about Course :<br />
+          <textarea name="my text" id="" cols="60" rows="10"></textarea>
+        </div>
+        <br />
+      <div class="container">
+        <input type="submit" value="Submit now" />
+        <input type="reset" value="Reset now" />
+      </div>
+      
+    </form>
+    <button class="btn">More Info</button>
+    <div>
+        <a href="info.html" class="btn1">Learn More</a>
+    </div>
+  </body>   
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelly fitness</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">  
+<style>
+    /* css reset */
+    body{
+    font-family: 'Amaranth';
+    font-size: 18px; 
+     margin: 0px;
+     padding: 0px; 
+     background:url('images/gym.jpg');
+     color:white;
+   
+  
+    }
+    .left{
+        display: inline-block;
+        /* border: 2px solid purple; */
+        /* background-color: black; */
+        position:absolute;
+        left:25px;
+        top: 18px;
+    }
+    .left img{
+        width:50px;
+        text-align: center ;
+        
+        
+        filter: invert(100%);    /* ye img k color ko change krta black h to white kr deta h or white h to black kr deta h*/
+    }
+    .left :hover{
+        text-decoration: underline;
+        color:purple; 
+        cursor: pointer;
+    }
+    .left div{
+        line-height: 10px;
+        margin:1px;
+        font-size: 14px;
+        font-style: bold;
+        text-align: center;
+
+        
+    }
+    .mid{
+        display: block;
+        width: 50%;
+        margin: 15px auto;
+        padding: auto;
+        /* border: 2px solid purple; */
+        /* background-color: black; */
+   
+        
+    }
+    .right{
+        display: inline-block;
+        /* border: 2px solid purple; */
+        position:absolute;
+        right:25px;
+        top: 22px;
+        /* background-color: black; */
+    }
+    
+    .btn{
+        margin:0px 9px;
+        padding:4px 14px;
+       text-decoration: none;
+       color:black;
+       /* border: 3px solid black; */
+       border-radius: 1px;
+       font-size: 15px;
+       cursor:pointer;
+    }
+    .btn:hover{
+       text-decoration: underline;
+        color:purple;    
+    }
+   
+    .navbar{
+        display:inline-block; /* display:inline-block; */
+    }
+    .navbar li{
+        display:inline-block;
+    }
+    .navbar li a{
+        /* color:white; */
+        color:white;
+        text-decoration: none;
+        padding: 2px 10px;
+       
+    }
+    .navbar li a:hover{
+        text-decoration: underline;
+        color:purple;
+    }
+    .btn1{
+        margin:3px 3px;
+        padding:4px 3px;
+       text-decoration: none;
+       color:black;
+       /* border: 3px solid purple; */
+       border-radius: 1px;
+       font-size: 15px;
+       cursor:pointer;
+       position:fixed;
+       bottom:18px;
+       right:18px;
+
+    }
+    .btn1:hover{
+        text-decoration: underline;
+        color:purple;
+    }
+    .container{
+        /* border: 2px solid green; */
+        padding: 2px 2px;
+        margin: 30px 50px;
+        width: 280px;
+        border-radius: 2px;
+        font-size: 9px;   
+     
+    }
+    .container h1{
+        display:block;
+        width: 90%;
+        margin:5px auto;
+       background-color: black;
+       padding:3px 5px;
+       border: 2px solid purple;
+    }
+    .first details li a{
+        text-decoration: none;
+    }
+    .details li a{
+        display: inline-block;
+        width: 190px;
+         text-decoration: none;
+         font-size: 20px;
+         color:black;
+         background-color: white;
+         margin:2px auto;
+         padding:4px 4px;
+         border: 2px solid purple;
+         text-align: center;
+         
+    }
+    .details li a:hover{
+        cursor:pointer;
+        color:purple;
+        text-decoration:underline;
+
+    }
+    .shared {
+        display: inline-block;
+        /* border: 2px solid purple; */
+        position:absolute;
+        /* left:25px; */
+        bottom: 12px;
+    }
+    h2{
+        display: inline-block;
+        /* border: 2px solid purple; */
+        position:absolute;
+        /* left:25px; */
+        bottom: 30px;
+    }
+    .btn5{
+        margin: 8px 4px;
+        background-color: blue;
+        border: 2px solid rgb(22, 100, 245);
+        border-radius: 2px;
+    }
+    .btn5 a{
+        text-decoration: none;
+        margin:3px 4px;
+        padding:4px 3px;    
+       font-size: 15px;
+       text-align: bold;
+     color:white;
+      
+    }
+    .btn5 a:hover{
+        cursor:pointer;
+        color:yellow;
+    }
+    .btn6{
+        margin: 8px 4px;
+        background-color:skyblue;
+        border: 2px solid rgb(204, 244, 247);
+        border-radius: 2px;
+    }
+    .btn6 a{
+        text-decoration: none;
+        margin:3px 4px;
+        padding:4px 3px;
+       font-size: 15px;
+       text-align: bold;
+     color:white;
+      
+    }
+    .btn6 a:hover{
+            cursor:pointer;
+            color:yellow;
+        }
+    .btn7{
+        margin: 8px 4px;
+        background-color: red;
+        border: 2px solid rgb(252, 80, 92);
+        border-radius: 2px;
+    }
+    .btn7 a{
+        text-decoration: none;
+        margin:3px 4px;
+        padding:4px 3px;
+        font-size: 15px;
+        text-align: bold;
+        color:white;     
+    }
+    .btn7 a:hover{
+        cursor:pointer;
+        color:yellow;
+    }
+    .btn8{
+        margin: 8px 4px;
+        background-color: rgb(55, 255, 0);
+        border: 2px solid rgb(139, 237, 147);
+        border-radius: 2px;
+    }
+    .btn8 a{
+        text-decoration: none;
+        margin:3px 4px;
+        padding:4px 3px;
+       font-size: 15px;
+       text-align: bold;
+     color:white;
+      
+    }
+    .btn8 a:hover{
+        cursor:pointer;
+        color:yellow;
+    }
+    .btn9{
+        margin: 8px 4px;
+        background-color: rgb(3, 46, 88);
+        border: 2px solid rgb(3, 97, 192);
+        border-radius: 2px;
+    }
+    .btn9 a{
+        text-decoration: none;
+        margin:3px 4px;
+        padding:4px 3px;
+       font-size: 15px;
+       text-align: bold;
+     color:white;
+      
+    }
+    .btn9 a:hover{
+        cursor:pointer;
+        color:yellow;
+    }
+   .container2{
+    
+    display: inline-block;
+        /* border: 2px solid purple; */
+        position:absolute;
+        right:50px;
+        top: 40px;
+        width:400px;
+        height:50px;
+        font-size:23px;
+        color:purple;
+        margin: 4px 4px;
+   }
+ 
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+         <img src="images/logo.png" alt="">
+         <div>Shelly fitness</div>
+        </div>
+        <!-- mid box for navbar(navigation) -->
+        <div class="mid">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Fitness Calculator</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+        <!-- <button class="btn"> Read More</button> -->
+      <button><a href="info.html" class="btn"> More Info</a></button>
+    </div>
+    <div><button class="btn1"> Contact Us Now </button></div>
+</header>
+<div class="container2">
+    <h1> Get a Perfect Body Figure . Pain is Temporary But Glory is Forever ....</h1>
+</div>
+     <div class="container">
+       <h1>Join the best Gym of Hisar Now </h1>
+    <!-- <form action="" class="form"> -->
+        <div class="first">
+            <ul class="details">
+                <li><a href="form.html">Registration Form</a></li>
+                <li><a href="#">Program</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        
+            <h2>Share This</h2>
+            <div class="shared">
+                <button class="btn5">
+                    <a href="https://Facebook.com">Facebook</a>
+                </button>
+                <button class="btn6">
+                    <a href="https://Twitter.com">Twitter</a> 
+                </button>
+                <button class="btn7">
+                    <a href="https://Pinterest.com">Pinterest</a>                   
+                </button>
+                <button class="btn8">
+                    <a href="https://Yahoo.com">Yahoo</a>     
+                </button>
+                <button class="btn9">
+                    <a href="https://Linkedln.com">Linkedln</a>
+                </button>
+            </div>
+       
+    </footer>
+    
+</body>
+</html>
+
